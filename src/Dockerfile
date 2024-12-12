@@ -1,23 +1,28 @@
-FROM node:18-alpine
+FROM node:18-alpine AS build
 
 WORKDIR /app
 
-COPY /app/package.json ./
+# Copiez uniquement les fichiers nécessaires pour installer les dépendances
+COPY ../package.json ./
+COPY ../package-lock.json ./
 
-RUN npm config set fetch-retries 5 && \
-    npm config set fetch-retry-mintimeout 20000 && \
-    npm config set fetch-retry-maxtimeout 120000 && \
-    npm config set maxsockets 1
-
+# Installer les dépendances
 RUN npm install
 
-COPY . .
+# Copier le reste de l'application
+COPY ../ ./
 
+# Construire l'application Angular
 RUN npm run build
 
+# Étape 2 : servir l'application Angular
 FROM nginx:alpine
-COPY --from=0 /app/build /usr/share/nginx/html
 
+# Copier les fichiers générés par la construction dans NGINX
+COPY --from=build /app/dist/your-angular-app /usr/share/nginx/html
+
+# Exposer le port NGINX
 EXPOSE 80
 
+# Commande pour démarrer NGINX
 CMD ["nginx", "-g", "daemon off;"]
