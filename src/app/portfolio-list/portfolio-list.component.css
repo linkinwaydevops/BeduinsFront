@@ -1,0 +1,91 @@
+.category-link {
+    color:rgb(255, 152, 0); /* Couleur bleue pour faire ressembler au lien */
+    text-decoration: underline; /* Ajouter une ligne de soulignement */
+    cursor: pointer; /* Changer le curseur pour indiquer un élément cliquable */
+}
+
+.category-link:hover {
+    color: rgb(255, 152, 0); /* Couleur au survol */
+}
+
+b{
+    all: unset; /* Réinitialise tous les styles hérités */
+    display: inline; /* Remet l'élément à l'état inline par défaut */
+    cursor: pointer; /* Change le curseur pour indiquer que l'élément est cliquable */
+    cursor: pointer; /* Assurez-vous que le curseur change au survol */
+    background-color: rgb(255, 152, 0);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    margin-right: 10px;
+
+}
+
+
+
+.box {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .box select {
+    background-color: rgb(255, 152, 0);
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    border-radius: 10px; /* Add border radius */
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    appearance: none; /* Remove default arrow */
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .box::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+  }
+  .scroll-container {
+    max-height: 200px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scroll */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgb(255, 152, 0); /* Background color */
+  }
+  .box select option {
+    padding: 8px;
+  }
+  .category-container {
+    margin: 10px 0;
+  }
+  
+  .form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ccc; /* Add border */
+    background-color: rgb(255, 152, 0); /* Orange background */
+    color: white; /* White text */
+    font-size: 16px;
+    width: 100%; /* Full width */
+    cursor: pointer;
+  }
+  
+  .form-control:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5); /* Add shadow on focus */
+  }
