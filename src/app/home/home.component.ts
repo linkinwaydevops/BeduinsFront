@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  email: string = 'agency@bedouinsstudios.com'; // Exemple de définition
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -23,6 +25,9 @@ export class HomeComponent implements OnInit {
       
       window.location.reload();
     });
+  }
+  redirectToInstagram() {
+    window.open('https://www.instagram.com/bedouinsstudios/', '_blank', 'noopener,noreferrer');
   }
   navigateToHome() {
     this.router.navigateByUrl('/Home').then(() => {

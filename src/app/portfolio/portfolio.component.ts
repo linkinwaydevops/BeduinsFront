@@ -12,6 +12,7 @@ export class PortfolioComponent implements OnInit {
   projects: Project[] = [];
   userId: number = 0;
   listeEmpty:boolean=false;
+  email: string = 'agency@bedouinsstudios.com'; // Exemple de définition
 
   constructor(private route: ActivatedRoute, private clientService: ClientService,private router: Router) { }
 
@@ -39,6 +40,9 @@ export class PortfolioComponent implements OnInit {
       
       window.location.reload();
     });
+  }
+  redirectToInstagram() {
+    window.open('https://www.instagram.com/bedouinsstudios/', '_blank', 'noopener,noreferrer');
   }
   initializePreloader() {
     const preloader = document.querySelector('.mil-preloader');

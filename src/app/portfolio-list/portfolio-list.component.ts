@@ -36,14 +36,16 @@ export class PortfolioListComponent implements OnInit{
   currentPage: number = 1; // Page actuelle
   profilesPerPage: number = 5; 
   filteredUsers: UserProfile[] = []; 
-  
+  email: string = 'agency@bedouinsstudios.com'; // Exemple de définition
   allUsers: UserProfile[] = []; 
   constructor(private route: ActivatedRoute,private router: Router, private clientService: ClientService) {}
 
   ngOnInit() {
     this.getAllProfiles();
   }
-
+  redirectToInstagram() {
+    window.open('https://www.instagram.com/bedouinsstudios/', '_blank', 'noopener,noreferrer');
+  }
   getAllProfiles() {
     this.clientService.getAllUserProfiles().subscribe(res => {
       this.userProfiles = res;

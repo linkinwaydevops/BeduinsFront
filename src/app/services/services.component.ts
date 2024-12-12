@@ -7,13 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-
+  email: string = 'agency@bedouinsstudios.com'; // Exemple de définition
   constructor(private router: Router) {}
 
 
   ngOnInit(): void {
     
   }
+  redirectToPortfolio() {
+    window.open('https://www.theace.world/portfolio', '_blank', 'noopener,noreferrer');
+  }
+  redirectToInstagram() {
+    window.open('https://www.instagram.com/bedouinsstudios/', '_blank', 'noopener,noreferrer');
+  }
+  
   navigateToPortfolio() {
     this.router.navigateByUrl('/PortfolioList').then(() => {
       
