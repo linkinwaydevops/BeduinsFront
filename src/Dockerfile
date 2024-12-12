@@ -19,7 +19,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copier les fichiers générés par la construction dans NGINX
-COPY --from=build /app/dist/your-angular-app /usr/share/nginx/html
+COPY --from=build /app/dist/bedouins-client /usr/share/nginx/html
 
 # Exposer le port NGINX
 EXPOSE 80
