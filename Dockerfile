@@ -6,7 +6,7 @@ RUN npm run build --prod
 
 FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=build /app/dist/bedouins-client /usr/share/nginx/html
+COPY --from=build /app/dist/bedouin-client /usr/share/nginx/html
 
 # Exposer le port NGINX
 EXPOSE 80
