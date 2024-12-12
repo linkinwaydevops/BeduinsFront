@@ -1,24 +1,10 @@
-FROM node:18-alpine AS build
-
+FROM node:latest as node
 WORKDIR /app
-
-# Copiez uniquement les fichiers nécessaires pour installer les dépendances
-COPY ../package.json ./
-COPY ../package-lock.json ./
-
-# Installer les dépendances
+COPY . .
 RUN npm install
-
-# Copier le reste de l'application
-COPY ../ ./
-
-# Construire l'application Angular
-RUN npm run build
-
-# Étape 2 : servir l'application Angular
+RUN npm run build --prod
 FROM nginx:alpine
-
-# Copier les fichiers générés par la construction dans NGINX
+RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist/bedouins-client /usr/share/nginx/html
 
 # Exposer le port NGINX
