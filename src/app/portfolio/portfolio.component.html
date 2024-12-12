@@ -183,7 +183,7 @@
                                                             <ng-container *ngIf="project.projectImagePaths.length > 0">
                                                                 <ng-container *ngIf="project.projectImagePaths[0].endsWith('.jpg') || project.projectImagePaths[0].endsWith('.png') || project.projectImagePaths[0].endsWith('.jpeg') || project.projectImagePaths[0].endsWith('.gif') || project.projectImagePaths[0].endsWith('.bmp') || project.projectImagePaths[0].endsWith('.tiff')">
                                                                     <img 
-                                                                        [src]="'http://localhost:8089/' + project.projectImagePaths[0]" 
+                                                                        [src]="'http://162.0.237.75:8089/' + project.projectImagePaths[0]" 
                                                                         alt="{{ project.projectName }}" 
                                                                         class="d-block w-100" 
                                                                     />
@@ -191,7 +191,7 @@
                                                                 <ng-container *ngIf="project.projectImagePaths[0].endsWith('.mp4') || project.projectImagePaths[0].endsWith('.ogg') || project.projectImagePaths[0].endsWith('.mov') || project.projectImagePaths[0].endsWith('.avi') || project.projectImagePaths[0].endsWith('.webm')">
                                                                     <video controls class="d-block w-100">
                                                                         <source 
-                                                                            [src]="'http://localhost:8089/' + project.projectImagePaths[0]" 
+                                                                            [src]="'http://162.0.237.75:8089/' + project.projectImagePaths[0]" 
                                                                             type="video/mp4">
                                                                         Your browser does not support the video tag.
                                                                     </video>

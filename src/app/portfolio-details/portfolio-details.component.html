@@ -345,11 +345,11 @@
         
                 <div class="mil-image-frame mil-square mil-drag" >
                     <ng-container *ngIf="mediaItem.endsWith('.jpg') || mediaItem.endsWith('.png') || mediaItem.endsWith('.jpeg') || mediaItem.endsWith('.gif') || mediaItem.endsWith('.bmp') || mediaItem.endsWith('.tiff') ||    mediaItem.endsWith('.gif')">
-                        <img [src]="'http://localhost:8089/' + mediaItem" alt="{{ project.projectName }}" class="d-block w-100" />             
+                        <img [src]="'http://162.0.237.75:8089/' + mediaItem" alt="{{ project.projectName }}" class="d-block w-100" />             
                     </ng-container>
                     <ng-container *ngIf="mediaItem.endsWith('.mp4') ||mediaItem.endsWith('.ogg') ||mediaItem.endsWith('.mov') ||mediaItem.endsWith('.avi') ||  mediaItem.endsWith('.webm')">
                         <video controls class="d-block w-100">
-                            <source [src]="'http://localhost:8089/' + mediaItem" type="video/mp4">
+                            <source [src]="'http://162.0.237.75:8089/' + mediaItem" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </ng-container>
