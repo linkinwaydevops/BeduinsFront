@@ -28,7 +28,7 @@ export class ServicesComponent implements OnInit {
     });
   }
   navigateToServices() {
-    this.router.navigateByUrl('/Services').then(() => {
+    this.router.navigateByUrl('/services').then(() => {
       
       window.location.reload();
     });
