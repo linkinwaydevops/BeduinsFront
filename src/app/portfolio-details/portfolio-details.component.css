@@ -1,0 +1,26 @@
+video-gallery {
+    display: flex;
+    justify-content: space-between; /* Espace entre les vidéos */
+    gap: 10px; /* Espacement entre les vignettes */
+}
+
+.video-item {
+    width: 30%; /* Largeur de chaque vidéo */
+    position: relative; /* Pour positionner la durée en bas */
+}
+
+video {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    height: auto; /* Garde le ratio original de la vidéo */
+    border-radius: 8px; /* Coins arrondis optionnels */
+}
+
+.duration {
+    position: absolute; /* Positionner en bas à gauche */
+    bottom: 10px; /* Éloigner du bas */
+    left: 10px; /* Éloigner du côté gauche */
+    color: white; /* Couleur du texte */
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    padding: 5px; /* Espacement autour du texte */
+    border-radius: 5px; /* Coins arrondis pour le fond */
+}
