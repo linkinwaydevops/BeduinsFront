@@ -7,12 +7,12 @@ import { PortfolioListComponent } from './portfolio-list/portfolio-list.componen
 import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
 
 const routes: Routes = [
-  {  path:'',  redirectTo :'Home' , pathMatch: 'full', },
-  {  path:'Home',  component:HomeComponent},
-  {  path:'Services',  component:ServicesComponent},
-  {  path:'Portfolio/:id',  component:PortfolioComponent},
-  {  path:'PortfolioList',  component:PortfolioListComponent},
-  {  path:'Portfolio/:id/:ProjectId',  component:PortfolioDetailsComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'portfolio/:id', component: PortfolioComponent },
+  { path: 'portfolio-list', component: PortfolioListComponent },
+  { path: 'portfolio/:id/:projectId', component: PortfolioDetailsComponent },
 ];
 
 @NgModule({
