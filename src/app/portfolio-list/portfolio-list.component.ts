@@ -99,6 +99,14 @@ export class PortfolioListComponent implements OnInit{
       window.location.reload();
     });
   }
+  filterProfilesByCategory() {
+    if (this.selectedCategory === 'All') {
+      this.filteredProfiles = this.userProfiles;
+    } else {
+      this.filteredProfiles = this.userProfiles.filter(profile => profile.category === this.selectedCategory);
+    }
+    this.currentPage = 1; // Réinitialiser la pagination
+  }
   navigateToHome() {
     this.router.navigateByUrl('/Home').then(() => {
       
