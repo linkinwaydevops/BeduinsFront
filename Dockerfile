@@ -8,7 +8,12 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/bedouin-client /usr/share/nginx/html
+# Copier le fichier nginx.conf dans le conteneur
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
+# Copier les certificats dans le conteneur
+COPY www_bedouinsstudios_com.crt /etc/nginx/BedouinClient/BeduinsFront/www_bedouinsstudios_com.crt
+COPY www_bedouinsstudios.key /etc/nginx/BedouinClient/BeduinsFront/www_bedouinsstudios.key
 
 # Exposer le port NGINX
 EXPOSE 80
