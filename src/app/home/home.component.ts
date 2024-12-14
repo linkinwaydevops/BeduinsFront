@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     
   }
   navigateToPortfolio() {
-    this.router.navigateByUrl('/PortfolioList').then(() => {
+    this.router.navigateByUrl('/portfolio-list').then(() => {
       
       window.location.reload();
     });
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     window.open('https://www.instagram.com/bedouinsstudios/', '_blank', 'noopener,noreferrer');
   }
   navigateToHome() {
-    this.router.navigateByUrl('/Home').then(() => {
+    this.router.navigateByUrl('/home').then(() => {
       
       window.location.reload();
     });

@@ -22,7 +22,7 @@ export class ServicesComponent implements OnInit {
   }
   
   navigateToPortfolio() {
-    this.router.navigateByUrl('/PortfolioList').then(() => {
+    this.router.navigateByUrl('/portfolio-list').then(() => {
       
       window.location.reload();
     });
@@ -34,7 +34,7 @@ export class ServicesComponent implements OnInit {
     });
   }
   navigateToHome() {
-    this.router.navigateByUrl('/Home').then(() => {
+    this.router.navigateByUrl('/home').then(() => {
       
       window.location.reload();
     });

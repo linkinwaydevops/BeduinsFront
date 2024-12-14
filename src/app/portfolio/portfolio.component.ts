@@ -24,7 +24,7 @@ export class PortfolioComponent implements OnInit {
 
   }
   navigateToPortfoliosss() {
-    this.router.navigateByUrl('/PortfolioList').then(() => {
+    this.router.navigateByUrl('/portfolio-list').then(() => {
       
       window.location.reload();
     });
@@ -36,7 +36,7 @@ export class PortfolioComponent implements OnInit {
     });
   }
   navigateToHome() {
-    this.router.navigateByUrl('/Home').then(() => {
+    this.router.navigateByUrl('/home').then(() => {
       
       window.location.reload();
     });
@@ -63,13 +63,13 @@ export class PortfolioComponent implements OnInit {
     );
   }
   navigateToPortfolio(projectId: number): void {
-    this.router.navigate(['/Portfolio/', this.userId,projectId]).then(() => {
-      window.location.href = `/Portfolio/${this.userId}/${projectId}`;
+    this.router.navigate(['/portfolio/', this.userId,projectId]).then(() => {
+      window.location.href = `/portfolio/${this.userId}/${projectId}`;
     });
   }
   navigateToPortfolios() {
-    this.router.navigate(['/PortfolioList']).then(() => {
-      window.location.href = `/PortfolioList`;
+    this.router.navigate(['/portfolio-list']).then(() => {
+      window.location.href = `/portfolio-list`;
     });
   }
 }

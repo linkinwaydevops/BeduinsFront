@@ -80,15 +80,15 @@ export class PortfolioListComponent implements OnInit{
   }
 
   navigateToPortfolio(userId: number): void {
-    this.router.navigate(['/Portfolio', userId]).then(() => {
-      window.location.href = `/Portfolio/${userId}`;
+    this.router.navigate(['/portfolio', userId]).then(() => {
+      window.location.href = `/portfolio/${userId}`;
     });
   }
   filterUsersByCategory(category: string) {
     this.filteredUsers = this.allUsers.filter(user => user.category === category);
   }
   navigateToPortfoliossss() {
-    this.router.navigateByUrl('/PortfolioList').then(() => {
+    this.router.navigateByUrl('/portfolio-list').then(() => {
       
       window.location.reload();
     });
@@ -108,7 +108,7 @@ export class PortfolioListComponent implements OnInit{
     this.currentPage = 1; // Réinitialiser la pagination
   }
   navigateToHome() {
-    this.router.navigateByUrl('/Home').then(() => {
+    this.router.navigateByUrl('/home').then(() => {
       
       window.location.reload();
     });

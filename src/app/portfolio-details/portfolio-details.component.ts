@@ -86,12 +86,12 @@ export class PortfolioDetailsComponent implements OnInit {
     );
   }
   navigateToPortfolio(userId: number): void {
-    this.router.navigate(['/Portfolio', userId]).then(() => {
-      window.location.href = `/Portfolio/${userId}`;
+    this.router.navigate(['/portfolio', userId]).then(() => {
+      window.location.href = `/portfolio/${userId}`;
     });
   }
   navigateToPortfolioss() {
-    this.router.navigateByUrl('/PortfolioList').then(() => {
+    this.router.navigateByUrl('/portfolio-list').then(() => {
       
       window.location.reload();
     });
@@ -103,7 +103,7 @@ export class PortfolioDetailsComponent implements OnInit {
     });
   }
   navigateToHome() {
-    this.router.navigateByUrl('/Home').then(() => {
+    this.router.navigateByUrl('/home').then(() => {
       
       window.location.reload();
     });
