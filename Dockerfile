@@ -19,7 +19,6 @@ COPY --from=build /app/dist/bedouin-client /usr/share/nginx/html
 COPY www_bedouinsstudios_com.crt /etc/nginx/BedouinClient/BeduinsFront/www_bedouinsstudios_com.crt
 COPY www_bedouinsstudios.key /etc/nginx/BedouinClient/BeduinsFront/www_bedouinsstudios.key
 COPY www_bedouinsstudios_com.ca-bundle /etc/nginx/BedouinClient/BeduinsFront/www_bedouinsstudios_com.ca-bundle
-
 # Exposer le port 80 et 443
 EXPOSE 80
 EXPOSE 443
