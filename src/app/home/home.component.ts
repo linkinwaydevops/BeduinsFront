@@ -17,13 +17,12 @@ export class HomeComponent implements OnInit {
   navigateToPortfolio() {
     this.router.navigateByUrl('/portfolio-list').then(() => {
       
-      window.location.reload();
+      
     });
   }
   navigateToServices() {
     this.router.navigateByUrl('/services').then(() => {
       
-      window.location.reload();
     });
   }
   redirectToInstagram() {
@@ -32,7 +31,8 @@ export class HomeComponent implements OnInit {
   navigateToHome() {
     this.router.navigateByUrl('/home').then(() => {
       
-      window.location.reload();
+      
+     
     });
   }
 }

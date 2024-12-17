@@ -58,15 +58,15 @@
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
                                     <li class="mil-has-children mil-active">
-                                        <a [routerLink]="['/home']">Homepage</a>
+                                        <a (click)="navigateToHome()">Homepage</a>
                                         
                                     </li>
                                     <li class="mil-has-children">
-                                        <a [routerLink]="['/portfolio-list']">Portfolio</a>
+                                        <a (click)="navigateToPortfolio()">Portfolio</a>
                                       
                                     </li>
                                     <li class="mil-has-children">
-                                        <a [routerLink]="['/services']">Services</a>
+                                        <a (click)="navigateToServices()">Services</a>
                                        
                                     </li>
                                
