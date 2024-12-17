@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
   navigateToHome() {
     this.router.navigateByUrl('/home').then(() => {
       
+      this.router.navigate(['/home'])
       
      
     });
